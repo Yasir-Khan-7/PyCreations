@@ -1,19 +1,22 @@
 #in this Game the user will guess the number and will be checked against the random number generated
+#note: break terminates the loop completely and continue terminates the current iteration 
 import random
 
-number = input("Enter a number: ")
+def Number_guesser(range_of_no,random_no):
+    guesses = 0
 
-if number.isdigit():
-    range_of_number = int(number)
-    if range_of_number > 0:
-        quit()
-    elif range_of_number<=0:
-        print("please enter a number greater than 0")
-        quit()
-else:
-    print("please enter a number ")    
+    print(f"random number was: {random_no}")
     
-#now going towards guessing
-random_no = random.randrange(0,number)
-print(random_no)
-       
+    while True:
+        number = input("Enter number to Guess: ")
+        guesses=guesses+1
+        if random_no==int(number):
+            print(f"you got it in {guesses}")
+            exit()
+        else:  
+            print("try again")
+            continue
+         
+range_of_no =6
+random_no = random.randint(1,range_of_no)       
+Number_guesser(range_of_no,random_no)
