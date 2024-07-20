@@ -1,0 +1,1 @@
+#This is adventure game where user  will enter into an adventure and explore crazy things and places
