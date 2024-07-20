@@ -18,7 +18,11 @@ while True:
                 answer = input("Do you want to enter into the cave? (y/n): ")
                 
                 if answer=='y':
-                    pass
+                    print("Inside the cave, you find two tunnels.")
+                else:
+                    answer =='n'
+                    print("your adventure ends here goodbye :)")
+                    break
         else:
             answer == 'right'
             print("you fall into a hidden pit and the game ends.")
