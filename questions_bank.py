@@ -94,8 +94,8 @@ def prime_numbers():
 
     return primes
 
-result = prime_numbers()
-print("The prime numbers between 1 to 50 are: ", result)
+# result = prime_numbers()
+# print("The prime numbers between 1 to 50 are: ", result)
 
 
 
@@ -103,3 +103,85 @@ print("The prime numbers between 1 to 50 are: ", result)
 
 #numpy and pandas exercises and matplotlib total = 30
 
+#create a numpy array and do basic multiplication and addition 
+
+import numpy as np 
+
+mylist = [1,2,3,4,5]
+mylist2 = [13,14,15,16,17]
+numarray = np.array(mylist)
+numarray2 = np.array(mylist2)
+
+#addition of numpy array
+# print(numarray+numarray2)
+
+
+#Create a numpy array and calculate its  mean ,median mode and standard deviation
+
+arr = np.array([3,4,5,6])
+
+meanres = arr.mean()
+medres = np.median(arr)
+
+stdres = arr.std()
+# print(meanres)
+# print(medres)
+# print(stdres)
+
+
+#create a numpy array and create it into different shapes 
+
+
+shapearr = np.array([1,2,3,4,5,6])
+
+checkshape = shapearr.shape
+
+# print(checkshape)
+
+updateshape = shapearr.reshape(3,2)
+
+# print(updateshape)
+
+
+
+#Q1 to 10 numpy --> 
+
+
+#Question 1 
+# create a numpy arraay from the python list and do something on it perform multiplications or anythin
+
+lst = [1,2,3,4,6]
+
+arr = np.array(lst)
+
+arr2 = np.array(lst)
+# print(arr.sum())
+# print(np.multiply(arr,arr2))
+
+
+
+#Question 2 
+#a program that genrerates a numpy array from 0 to 9 and then reshape it into 3X3
+
+def manipulation():
+    myls = []
+    for x in range(9):
+        print(x)
+        myls.append(x)
+      
+    req= np.array(myls)    
+    print(req.reshape(3,3))
+
+# manipulation()
+
+#create a function tthat takes numpy array and sort in ascending order 
+
+
+lstas = [2,4,1,5,8,7,6,9]
+def sortasc(arr):
+    newarr = np.array(arr)
+            
+    return np.sort(newarr)   
+
+result =sortasc(lstas)  
+print(result)  
